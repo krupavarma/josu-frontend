@@ -1,0 +1,21 @@
+<div class="section text-center">
+
+  <h1>Welcome back</h1>
+  <h4>Please login to your account to access the <br>full version.</h4>
+
+</div>
+
+
+<div class="card">
+
+  <button mat-button type="submit" class="button" *ngFor="let item of users"  [routerLink]="['./'+item.name.toLowerCase()]">
+   <strong> {{item.name}}</strong>
+  </button>
+
+</div>
+  <div class="text-center">
+    <img src="./assets/image/sidenavImage.png" class="img-responsive">
+  </div>
+
+
+<router-outlet></router-outlet>

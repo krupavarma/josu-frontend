@@ -1,0 +1,77 @@
+<div class="section text-center">
+
+  <h1>Welcome back</h1>
+  <h4>Please login to your account to access the <br>full version.</h4>
+
+</div>
+
+
+
+<form class="example-form" [formGroup]="loginForm" name="loginForm">
+
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="User Name or Email" formControlName="emailFormControl" [formControl]="emailFormControl" [(ngModel)]="data.userName">
+
+      <mat-error *ngIf="loginForm.get('emailFormControl').touched && loginForm.get('emailFormControl').invalid">
+
+        <mat-error *ngIf="emailFormControl.hasError('pattern')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('minLength')">
+          Minimum 12 charcters required
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('maxLength')">
+          Maximum 30 charcters required
+        </mat-error>
+
+      </mat-error>
+    </mat-form-field>
+
+  </div>
+
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <input matInput type="password" placeholder="Password" formControlName="passwordFormControl" [formControl]="passwordFormControl"
+        [(ngModel)]="data.password">
+
+      <mat-error *ngIf="loginForm.get('passwordFormControl').touched && loginForm.get('passwordFormControl').invalid">
+
+        <mat-error *ngIf="passwordFormControl.hasError('minLength')">
+          Minimum 8 charcters required
+        </mat-error>
+        <mat-error *ngIf="passwordFormControl.hasError('maxLength')">
+          Maximum 20 charcters required
+        </mat-error>
+        <mat-error *ngIf="passwordFormControl.hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
+
+      </mat-error>
+
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <button mat-button type="submit" class="btn btn-lg  btn-block btn-signin" [disabled]="loginForm.invalid" (click)="gotoDashboard()">login</button>
+
+  </div>
+
+
+</form>
+
+    <div class="paragraph text-center" style="border-radius: 27px;margin-left: 22px; padding: 0px; width: 300px;background-color: #e22b2b;color:aliceblue">
+      {{errorMessage}}
+    </div>
+
+<div class="section text-center">
+  <a routerLink="./forgotpassword">Forot Password?<strong> Get Help Signing in.</strong></a>
+</div>
+
+<div class="text-center">
+  <img src="./assets/image/sidenavImage.png" class="img-responsive">
+</div>

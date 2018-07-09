@@ -1,0 +1,99 @@
+.section {
+  background-color: #30a1da !important;
+  padding: 30px;
+  .container {
+    margin: 0px;
+    padding: 0px;
+    .card {
+      color: 2px solid white;
+      .nav-pills {
+        text-align: center;
+        border: 1px solid #72808E;
+        border-radius: 22px;
+        width: 42%;
+        word-spacing: 5px;
+        font-size: 14px;
+        overflow: hidden;
+        border: 1px solid white;
+        li {
+          // width: 33%;
+          display: inline-block;
+          text-align: center;
+          a {
+            text-align: center;
+            display: inline-block;
+            border-radius: 30px;
+            margin: auto;
+            padding: auto; // color: white;
+            // width: 110%;
+            // height: 42px;
+            font-size: 16px; // overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-pills>li.active {
+  a {
+    color: #30a1da;
+    background-color: white;
+  }
+}
+
+a {
+  color: white;
+}
+
+@media only screen and (max-width:319px) {
+  .section[_ngcontent-c1] .container[_ngcontent-c1] .card[_ngcontent-c1] .nav-pills[_ngcontent-c1] {
+    width: 74.7%;
+    border: none !important;
+    margin: auto !important;
+  }
+}
+
+@media only screen and (min-width:320px) and (max-width:582px) {
+  .section[_ngcontent-c1] .container[_ngcontent-c1] .card[_ngcontent-c1] .nav-pills[_ngcontent-c1] {
+    width: 52%;
+    border: none !important;
+    margin: auto !important;
+  }
+}
+@media only screen and (min-width:501px) and (max-width:581px) {
+  .section[_ngcontent-c1] .container[_ngcontent-c1] .card[_ngcontent-c1] .nav-pills[_ngcontent-c1] {
+    width: 42%;
+    border: none !important; 
+    margin: auto !important;
+  }
+ }
+@media only screen and (min-width:625px) and (max-width:765px) {
+  .section[_ngcontent-c1] .container[_ngcontent-c1] .card[_ngcontent-c1] .nav-pills[_ngcontent-c1] {
+    width: 81%;
+    border: none !important; 
+    margin: auto !important;
+  }
+}
+  
+
+@media only screen and (min-width:1024px) and (max-width:1196px) {
+    .section[_ngcontent-c1] .container[_ngcontent-c1] .card[_ngcontent-c1] .nav-pills[_ngcontent-c1] {
+      width: 51%; 
+     }
+ }
+ 
+ @media only screen and (min-width:768px) and (max-width:1023px) {
+   .section[_ngcontent-c1] .container[_ngcontent-c1] .card[_ngcontent-c1] .nav-pills[_ngcontent-c1] {
+     width: 66%; 
+     // border: none !important;
+     // margin: auto !important;
+   }
+ }
+ 
+ @media only screen and (max-width:1023px) {
+   .section[_ngcontent-c1] .container[_ngcontent-c1] .card[_ngcontent-c1] .nav-pills[_ngcontent-c1] {
+     border: none !important;
+     margin: auto !important;
+   }
+ }

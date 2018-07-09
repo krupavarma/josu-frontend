@@ -1,0 +1,83 @@
+<div class="container-fluid banner padding">
+   <div class="container">
+       <div class="row text-center">
+            <div class="container-1">
+               <div class="col-md-offset-1 col-md-9">
+                   <div class="hero-text">
+                       <p>Welcome To <strong>Josu</strong></p>
+                       <h4 class="text-center">Our training programs are designed to accomodate students of all levels and provide them with job courses that are job oriented. A student is throughly interviewed by a panel interviewers.</h4>
+                   </div>
+               </div>
+               <div class="hidden-xs col-md-offset-4 col-md-4 col-sm-4 col-sm-offset-4">
+                   <div class="hero-image padding" *ngFor="let image of images">
+                       <img class="img-responsive" src={{image.designer}}>
+                           
+                   
+                   </div>
+               </div>
+           </div>   
+       </div>
+   </div>
+</div>
+<div class="container">
+   <div class="row">
+       <div class="col-md-12">
+           <div class="container-2 text-center">
+               <p class="text-center">Let's make customer support interaction
+                   <br> more human and more reliable.</p>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="container">
+   <div class="row">
+       <div class="col-md-12 col-sm-12 container-6">
+           <div class="col-md-4 col-sm-4 text-center" *ngFor="let item of sections">
+               <img src={{item.image}}>
+               <h3><strong>{{item.heading}}</strong></h3>
+               <p>{{item.content}}</p>
+               <a>
+                   <h5>{{item.link}}</h5>
+               </a>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="container-fluid container-3">
+   <div class="container">
+       <div class="row text-center">
+           <div class="col-md-12 col-sm-12">
+               <div class="section">
+                   <h4>
+                       Parallel Labs brought a fresh approach to design, considered practical use cases and had a completly hands-on
+                       <br>approach in comming up with a great customer friendly design for our product. Overall we loved working with
+                       <br>the team and we strongly recommneded them for UI/UX design.
+                   </h4>
+                   <p><strong>-Surendra Reddy B</strong></p>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="container">
+   <div class="row text-center">
+       <div class="col-md-12 col-sm-12">
+           <div class="container-4">
+               <div *ngFor="let image of images">
+               
+                       <div class="col-md-4 col-sm-4">
+                           <img class="img-responsive" src={{image.lync}}>
+                       </div>
+                       <div class="col-md-4 col-sm-4">
+                           <img class="img-responsive" src={{image.lync}}>
+                       </div>
+                       <div class="col-md-4 col-sm-4">
+                           <img class="img-responsive" src={{image.lync}}>
+                       </div>
+       
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+<app-footer></app-footer>

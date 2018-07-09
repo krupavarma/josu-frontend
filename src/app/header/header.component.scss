@@ -1,0 +1,74 @@
+.image {
+  a {
+    img {
+      height: 30px;
+    }
+  }
+}
+
+.navbar-default {
+  height: 70px;
+  margin-bottom: 0px;
+}
+
+.button-container {
+  width: 129px;
+  height: 38px;
+  border-radius: 4px;
+  text-align: center;
+  color: #ffffff !important;
+  padding-top: 9px;
+  background-color: #30a1da !important;
+  // margin-top:6px;
+  margin-right:32px;
+}
+
+.tabs {
+  padding-left: 35px;
+}
+
+.example-container {
+  width: auto;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav {
+  background-color: #f1f1f1;
+  padding: 30px;
+  overflow: hidden;
+}
+
+mat-sidenav {
+  background-color: "#e6e9ef";
+  button {
+    background-color: lightgray;
+    cursor: pointer;
+    color: black;
+  }
+  button:hover {
+    background-color: #2fa1da;
+    color: white;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+  }
+}
+
+::ng-deep .mat-drawer-transition .mat-drawer-backdrop {
+  background-color: rgba(65, 125, 244, 0.7) !important;
+}
+::ng-deep .mat-drawer-content{
+overflow: hidden!important;
+}
+.navbar-default[_ngcontent-c1] .navbar-collapse[_ngcontent-c1] {
+    background-color: white;
+    margin-left: -9px;
+    margin-right: -22px;
+    margin-top: 10px;
+    padding: 0px;
+    // position: relative;
+}
+ 
+

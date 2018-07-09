@@ -1,0 +1,114 @@
+<div class="section text-center">
+
+   <h1>College Registration</h1>
+  <h4>Create your account in easy steps with less<br>information.</h4>
+
+
+</div>
+
+
+
+<form class="example-form" [formGroup]="collegeForm" name="collegeForm">
+
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width">
+      <input matInput placeholder="First Name" formControlName="firstName" [(ngModel)]="data.firstName" [formControl]="firstName">
+
+      <mat-error *ngIf="collegeForm.get('firstName').touched && collegeForm.get('firstName').invalid">
+
+
+        <mat-error *ngIf="firstName.hasError('required')">
+          First Name is <strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="firstName.hasError('minLength')">
+          Minimum 3 charcters required
+        </mat-error>
+        <mat-error *ngIf="firstName.hasError('maxLength')">
+          Maximum 20 charcters required
+        </mat-error>
+
+      </mat-error>
+    </mat-form-field>
+
+  </div>
+
+
+  <div class="form-group" >
+    <mat-form-field class="example-half-width" style="margin-left:23px">
+      <input matInput placeholder="Last Name" formControlName="lastName" [(ngModel)]="data.lastName" [formControl]="lastName">
+
+      <mat-error *ngIf="collegeForm.get('lastName').touched && collegeForm.get('lastName').invalid">
+
+        <mat-error *ngIf="lastName.hasError('minLength')">
+          Minimum 3 charcters required
+        </mat-error>
+        <mat-error *ngIf="lastName.hasError('maxLength')">
+          Maximum 20 charcters required
+        </mat-error>
+        <mat-error *ngIf="lastName.hasError('required')">
+          Last Name is <strong>required</strong>
+        </mat-error>
+
+      </mat-error>
+
+    </mat-form-field>
+  </div>
+
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="User Id" formControlName="userName"  [(ngModel)]="data.userName" [formControl]="userName">
+
+      <mat-error *ngIf="collegeForm.get('userName').touched && collegeForm.get('userName').invalid">
+
+
+        <mat-error *ngIf="userName.hasError('required')">
+          User Id is <strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="userName.hasError('minLength')">
+          Minimum 3 charcters required
+        </mat-error>
+        <mat-error *ngIf="userName.hasError('maxLength')">
+          Maximum 20 charcters required
+        </mat-error>
+
+      </mat-error>
+    </mat-form-field>
+
+  </div>
+
+
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Email Id" formControlName="primaryEmail"  [(ngModel)]="data.primaryEmail" [formControl]="primaryEmail">
+
+      <mat-error *ngIf="collegeForm.get('primaryEmail').touched && collegeForm.get('primaryEmail').invalid">
+
+        <mat-error *ngIf="primaryEmail.hasError('pattern')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="primaryEmail.hasError('required')">
+          Email Id<strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="primaryEmail.hasError('minLength')">
+          Minimum 12 charcters required
+        </mat-error>
+        <mat-error *ngIf="primaryEmail.hasError('maxLength')">
+          Maximum 30 charcters required
+        </mat-error>
+
+      </mat-error>
+    </mat-form-field>
+
+  </div>
+   <div class="form-group">
+    <!-- <a routerLink="./collegeProfessional"><button type="submit" [disabled]="collegeForm.invalid">></button></a> -->
+   <button routerLink="./collegeProfessional" mat-fab color="primary"  [disabled]="collegeForm.invalid" (click)="collegebasic()"><i class="material-icons">keyboard_arrow_right</i></button>
+  </div>
+
+</form>
+ <div class="text-center">
+    <img src="./assets/image/college.png" class="img-responsive">
+  </div>

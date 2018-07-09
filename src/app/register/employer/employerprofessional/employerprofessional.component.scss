@@ -1,0 +1,46 @@
+// .example-form {
+//   min-width: 350px;
+//   max-width: 500px;
+//   width: 100%;
+//   font-size: 15px;
+// }
+// .example-full-width {
+//   width: 100%;
+//   margin-top: 15px;
+// }
+// .example-half-width {
+//   width: 46%;
+//   float: left;
+// }
+.form-group {
+  button {
+    border-radius: 30px;
+    padding: 3px;
+    color: white;
+    background-color: #2fa1da;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
+
+// .section{
+//   h4{
+//     margin-top: 25px;
+//     color: #5f6268;
+//   }
+// }
+.img-responsive {
+  width: 360px;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.example-sidenav {
+  background-color: #f1f1f1;
+  padding: 30px;
+  overflow: hidden;
+  width: 360px !important;
+}
+
+

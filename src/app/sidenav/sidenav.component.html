@@ -1,0 +1,15 @@
+
+
+<div class="card">
+
+  <span>
+    <ul class="nav nav-pills">
+       <li [ngClass]="{'active': selectedItem == item.name}" (click)="listClick($event, item)" *ngFor="let item of navpills"><a [routerLink]="['./'+item.name.toLowerCase()]">{{item.name}}</a></li>
+     </ul>
+  </span>
+
+  <div class="example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

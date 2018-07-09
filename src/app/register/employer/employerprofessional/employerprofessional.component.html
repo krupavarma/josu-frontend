@@ -1,0 +1,104 @@
+<div class="section text-center" *ngIf="PageName !=='congrats'">
+
+  <h1>Professional Details</h1>
+  <h4>Create your account in easy steps with less<br>information.</h4>
+
+</div>
+
+
+<form class="example-form" [formGroup]="employerForm" name="employerForm"  *ngIf="PageName !=='congrats'">
+
+
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width">
+      <input matInput placeholder="Position" formControlName="position" [formControl]="position" [(ngModel)]="data.position">
+
+      <mat-error *ngIf="employerForm.get('position').touched && employerForm.get('position').invalid">
+
+        <mat-error *ngIf="position.hasError('required')">
+          Enter Your <strong>position</strong> In The Company
+        </mat-error>
+
+      </mat-error>
+
+    </mat-form-field>
+  </div>
+
+
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width" style="margin-left:23px">
+      <input matInput placeholder="Industry Belongs To" formControlName="industry" [formControl]="industry" [(ngModel)]="data.industry">
+
+      <mat-error *ngIf="employerForm.get('industry').touched && employerForm.get('industry').invalid">
+
+        <mat-error *ngIf="industry.hasError('required')">
+          Enter Your <strong>Industry Belongs To</strong>
+        </mat-error>
+
+      </mat-error>
+
+    </mat-form-field>
+  </div>
+
+
+
+
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Company Name" formControlName="companyName" [formControl]="companyName" [(ngModel)]="data.companyName">
+
+      <mat-error *ngIf="employerForm.get('companyName').touched && employerForm.get('companyName').invalid">
+
+
+        <mat-error *ngIf="companyName.hasError('required')">
+          Enter Your <strong>Company Name</strong>
+        </mat-error>
+
+
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Company Website" formControlName="companyWebsite" [formControl]="companyWebsite" [(ngModel)]="data.companyWebsite">
+
+      <mat-error *ngIf="employerForm.get('companyWebsite').touched && employerForm.get('companyWebsite').invalid">
+
+
+        <mat-error *ngIf="companyWebsite.hasError('required')">
+          Company Website <strong>required</strong>
+        </mat-error>
+
+
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+
+  <div class="form-group">
+    <button mat-button type="submit" class="btn btn-lg btn-block btn-signin" [disabled]="employerForm.invalid" (click)="LoadPage()" (click)="employerprofessional()" (click)="openSnackBar()">Register</button>
+  </div>
+
+</form>
+<div class="text-center" *ngIf="PageName !=='congrats'">
+  <img src="./assets/image/employer.png" class="img-responsive" >
+</div>
+
+<div *ngIf="PageName =='congrats'"  >
+  <div class="section text-center">
+
+    <h1>Congratulation</h1>
+    <h4 style="margin-top:30px;">Account is Successfully Activated <br>Please SignIn..</h4>
+
+  </div>
+
+  <div class="text-center" style="width:300px;margin:auto;">
+    <img src="./assets/image/congratulationImage.png" class="img-responsive">
+  </div>
+</div>

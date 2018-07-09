@@ -1,0 +1,14 @@
+
+<div class="card">
+
+  <button mat-button type="submit" class="button" *ngFor="let item of profilePageTabs"  [routerLink]="['./'+item.name.toLowerCase()]">
+   <strong> {{item.name}}</strong>
+  </button>
+
+</div>
+  <div class="text-center">
+    <img src="./assets/image/sidenavImage.png" class="img-responsive">
+  </div>
+
+
+<!-- <router-outlet></router-outlet> -->

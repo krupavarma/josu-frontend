@@ -1,0 +1,73 @@
+<div class="container-fluid container-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="col-sm-3 col-md-3">
+          <div *ngFor="let first of footer">
+            <ul *ngFor="let i of first.column1">
+              <li *ngIf="i.logo"><img class="img-responsive" src={{i.logo}}></li>
+              <li *ngIf="i.content">
+                <h5>&copy;{{i.content}}</h5>
+              </li>
+              <li *ngIf="i.link">
+                <a>
+                  <h5>{{i.link}}</h5>
+                </a>
+              </li>
+              <span *ngFor="let icon of i.icons">    
+                 <li><i class={{icon.name}}></i></li>    
+            </span>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-3 col-md-3">
+          <div *ngFor="let second of footer">
+
+            <ul *ngFor="let ii of second.column2">
+
+              <li *ngIf="ii.heading1">
+
+                <h3>{{ii.heading1}}</h3>
+
+              </li>
+
+              <li class="name" *ngIf="ii.name">{{ii.name}}</li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-3 col-md-3">
+
+          <div *ngFor="let third of footer">
+
+            <ul *ngFor="let iii of third.column3">
+
+              <li *ngIf="iii.heading2">
+
+                <h3>{{iii.heading2}}</h3>
+
+              </li>
+
+              <li class="name" *ngIf="iii.name">{{iii.name}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-3 col-md-3">
+
+          <div *ngFor="let fourth of footer">
+
+            <ul *ngFor="let iv of fourth.column4">
+
+              <li *ngIf="iv.heading3">
+
+                <h3>{{iv.heading3}}</h3>
+              </li>
+              <li class="name" *ngIf="iv.name">{{iv.name}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

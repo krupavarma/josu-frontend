@@ -1,0 +1,31 @@
+.container-5 {
+    background-color: #1f2532;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .container {
+        .row {
+            ul {
+                .name {
+                    color: lightgray;
+                    cursor: pointer;
+                }
+                li {
+                    display: inline-block;
+                    list-style-type: none;
+                    color: white;
+                    h3 {
+                        color: lightgray;
+                    }
+                    h5 {
+                        color: lightgray;
+                    }
+                    a {
+                        cursor: pointer;
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<app-dashboardheader>
+</app-dashboardheader>
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+
+          <ul class="nav nav-pills">
+            <li [ngClass]="{'active': selectedItem == item.name}" (click)="listClick($event, item)" *ngFor="let item of collegeDashboardNavpills">
+              <a [routerLink]="['./'+item.link.toLowerCase()]"><b>{{item.name}}</b></a>
+            </li>
+          </ul>
+          <!-- {{position}}
+        {{firstName}} -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

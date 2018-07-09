@@ -1,0 +1,35 @@
+
+  <nav class="navbar navbar-default" style="padding:8px;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+      <div class="image" *ngFor="let item of images">
+        <div *ngIf="item.logo">
+          <a class="navbar-brand" href="#">
+                  <img src={{item.logo}} class="img-responsive">
+              </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="tabs"><a routerLink="/home">HOME</a></li>
+        <li class="tabs"><a routerLink="/home">ABOUT US</a></li>
+        <li class="tabs"><a routerLink="/home">CONTACT US</a></li>
+
+       <li class="tabs">
+        <a class="button-container button-content" data-toggle="collapse" href="#nav-collapse1" aria-expanded="false" aria-controls="nav-collapse1"
+          (click)="navigate()">LOGOUT</a>
+      </li>
+      </ul>
+    </div>
+
+  </nav>
+
+
+
+ 

@@ -1,0 +1,150 @@
+<div class="section text-center">
+
+  <h1>Address Details</h1>
+  <h4>Create your account in easy steps with less<br>information.</h4>
+
+
+</div>
+
+
+
+<form class="example-form" [formGroup]="employerForm" name="employerForm">
+
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width">
+      <input matInput type="number" placeholder="Contact Number" formControlName="mobile" [formControl]="mobile" [(ngModel)]="data.mobile">
+
+      <mat-error *ngIf="employerForm.get('mobile').touched && employerForm.get('mobile').invalid">
+
+
+        <mat-error *ngIf="mobile.hasError('required')">
+          contact number <strong>required</strong>
+        </mat-error>
+
+        <mat-error *ngIf="mobile.hasError('maxLength')">
+          Maximum 14 charcters required
+        </mat-error>
+
+      </mat-error>
+    </mat-form-field>
+
+  </div>
+
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width" style="margin-left:23px">
+      <input matInput type="number" placeholder="Fax" formControlName="fax" [formControl]="fax" [(ngModel)]="data.fax">
+
+      <mat-error *ngIf="employerForm.get('fax').touched && employerForm.get('fax').invalid">
+
+        <mat-error *ngIf="fax.hasError('required')">
+          Last Name is <strong>required</strong>
+        </mat-error>
+
+      </mat-error>
+
+    </mat-form-field>
+  </div>
+
+
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Address" formControlName="address" [formControl]="address" [(ngModel)]="data.address">
+
+      <mat-error *ngIf="employerForm.get('address').touched && employerForm.get('address').invalid">
+
+
+        <mat-error *ngIf="address.hasError('required')">
+          Address is <strong>required</strong>
+        </mat-error>
+
+
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width">
+      <input matInput type="number" placeholder="Zip Code" formControlName="zipcode" [formControl]="zipcode" [(ngModel)]="data.zipcode">
+
+      <mat-error *ngIf="employerForm.get('zipcode').touched && employerForm.get('zipcode').invalid">
+
+
+        <mat-error *ngIf="zipcode.hasError('required')">
+          Zip Code <strong>required</strong>
+        </mat-error>
+
+        <mat-error *ngIf="zipcode.hasError('maxLength')">
+          Maximum 6 charcters required
+        </mat-error>
+
+      </mat-error>
+    </mat-form-field>
+
+  </div>
+
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width" style="margin-left:23px">
+      <input matInput placeholder="City" formControlName="city" [formControl]="city" [(ngModel)]="data.city" >
+
+      <mat-error *ngIf="employerForm.get('city').touched && employerForm.get('city').invalid">
+
+        <mat-error *ngIf="city.hasError('required')">
+          Enter Your <strong>City</strong>
+        </mat-error>
+
+      </mat-error>
+
+    </mat-form-field>
+  </div>
+
+
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width">
+      <input matInput placeholder="State" formControlName="state" [formControl]="state" [(ngModel)]="data.state">
+
+      <mat-error *ngIf="employerForm.get('state').touched && employerForm.get('state').invalid">
+
+        <mat-error *ngIf="state.hasError('required')">
+          Enter Your <strong>State</strong>
+        </mat-error>
+
+      </mat-error>
+
+    </mat-form-field>
+  </div>
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width" style="margin-left:23px">
+      <input matInput placeholder="Country" formControlName="country" [formControl]="country" [(ngModel)]="data.country">
+
+      <mat-error *ngIf="employerForm.get('country').touched && employerForm.get('country').invalid">
+
+        <mat-error *ngIf="country.hasError('required')">
+          Enter Your <strong>Country</strong>
+        </mat-error>
+
+      </mat-error>
+
+    </mat-form-field>
+  </div>
+
+
+
+   <div class="form-group">
+    <!-- <a routerLink="./employerProfessional"><button type="submit" [disabled]="addressForm.invalid">></button></a> -->
+    <button  routerLink="./employerProfessional" mat-fab color="primary" [disabled]="employerForm.invalid" (click)="employerpersonal()"><i class="material-icons">keyboard_arrow_right</i></button>
+  </div>
+
+  
+</form>
+ <div class="text-center">
+    <img src="./assets/image/employer.png" class="img-responsive">
+  </div>
+

@@ -1,0 +1,110 @@
+// common colors
+$white: #FFFFFF;
+$black: #000000;
+$nightRider: #333333;
+$americano: #72808E;
+$dodgerBlue: #2D8CFF;
+$greenBanner: #7EBD42;
+$footerBackground: #1F2532;
+$seaShell: #F1F1F1;
+$lightBlack: #353535;
+$darkGray: #4A4A4A;
+$gray81: #CFCFCF;
+$darkRed: #EC5524;
+$theme: #2fa1da;
+//common css
+body,
+html {
+   
+    height: 100%;
+    overflow-x: hidden;
+}
+a,p,ul,li,span,button,input,label,strong{
+    font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,b{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+*:focus {
+    outline: none !important;
+    border: 0;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.disabled {
+    cursor: not-allowed !important;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.no-pointer {
+    cursor: default;
+}
+
+.full-page {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+
+.example-full-width {
+    width: 100%;
+  }
+  
+  .example-half-width {
+    width: 45%;
+    float: left;
+    
+  }
+  
+  
+  .form-group {
+    button {
+    border-radius: 50%;
+    color: white;
+     font-size: 18px;
+    cursor: pointer;
+    }
+    button:disabled{
+      cursor:not-allowed;
+    }
+  
+    
+  }
+  .section{
+    h4{
+      margin-top: 25px;
+      color: #5f6268;
+    }
+  }
+  .button:hover {
+    background-color: #2fa1da !important;
+    color: "$white" !important;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+  }

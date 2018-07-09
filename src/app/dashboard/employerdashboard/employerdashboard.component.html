@@ -1,0 +1,39 @@
+ <mat-sidenav-container class="example-container"> 
+  <app-dashboardheader>
+  </app-dashboardheader>
+  <div class="section">
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div class="col-md-10">
+          <div class="card">
+
+            <ul class="nav nav-pills">
+              <li [ngClass]="{'active': selectedItem == item.name}" (click)="listClick($event, item)" *ngFor="let item of employerDashboardNavpills">
+                <a [routerLink]="['./'+item.link.toLowerCase()]"><b>{{item.name}}</b></a>
+              </li>
+
+            </ul>
+            <!-- {{position}}
+          {{firstName}} -->
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <a style="cursor:pointer;text-decoration:none;float:left;" (click)="sidenav.open()">profile page</a>
+          <img src="./assets/image/profile.jpg" class="img-responsive" style="margin-top:-20px;float:right;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <router-outlet></router-outlet>
+   <mat-sidenav #sidenav align="end" class="example-sidenav">
+    
+    <button mat-mini-fab  (click)="sidenav.close()" style="float:right">X</button> 
+    <app-profilepage></app-profilepage>
+  </mat-sidenav>
+</mat-sidenav-container> 
+<!-- <router-outlet></router-outlet> -->

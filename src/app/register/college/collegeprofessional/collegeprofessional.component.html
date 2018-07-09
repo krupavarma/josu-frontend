@@ -1,0 +1,183 @@
+<div class="section text-center" *ngIf="PageName !=='congrats'">
+
+  <h1>College Details</h1>
+  <h4>Create your account in easy steps with less<br>information.</h4>
+
+
+</div>
+
+
+
+<form class="example-form" [formGroup]="collegeForm" name="collegeForm" *ngIf="PageName !=='congrats'">
+
+
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="College Name" formControlName="collegeName" [(ngModel)]="data.collegeName" [formControl]="collegeName">
+
+      <mat-error *ngIf="collegeForm.get('collegeName').touched && collegeForm.get('collegeName').invalid">
+
+
+        <mat-error *ngIf="collegeName.hasError('required')">
+          College Name is <strong>required</strong>
+        </mat-error>
+
+
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Address" formControlName="address" [(ngModel)]="data.address" [formControl]="address">
+
+      <mat-error *ngIf="collegeForm.get('address').touched && collegeForm.get('address').invalid">
+
+
+        <mat-error *ngIf="address.hasError('required')">
+          Address is <strong>required</strong>
+        </mat-error>
+
+
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width">
+      <input matInput type="number" placeholder="Zip Code" formControlName="zipcode" [(ngModel)]="data.zipcode" [formControl]="zipcode">
+
+      <mat-error *ngIf="collegeForm.get('zipcode').touched && collegeForm.get('zipcode').invalid">
+
+
+        <mat-error *ngIf="zipcode.hasError('required')">
+          Zip Code <strong>required</strong>
+        </mat-error>
+
+        <mat-error *ngIf="zipcode.hasError('maxLength')">
+          Maximum 6 charcters required
+        </mat-error>
+
+      </mat-error>
+    </mat-form-field>
+
+  </div>
+
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width" style="margin-left:23px">
+      <input matInput placeholder="City" formControlName="city" [(ngModel)]="data.city" [formControl]="city">
+
+      <mat-error *ngIf="collegeForm.get('city').touched && collegeForm.get('city').invalid">
+
+        <mat-error *ngIf="city.hasError('required')">
+          Enter Your <strong>City</strong>
+        </mat-error>
+
+      </mat-error>
+
+    </mat-form-field>
+  </div>
+
+
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width">
+      <input matInput placeholder="State" formControlName="state" [(ngModel)]="data.state" [formControl]="state">
+
+      <mat-error *ngIf="collegeForm.get('state').touched && collegeForm.get('state').invalid">
+
+        <mat-error *ngIf="state.hasError('required')">
+          Enter Your <strong>State</strong>
+        </mat-error>
+
+      </mat-error>
+
+    </mat-form-field>
+  </div>
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width" style="margin-left:23px">
+      <input matInput placeholder="Country" formControlName="country" [(ngModel)]="data.country" [formControl]="country">
+
+      <mat-error *ngIf="collegeForm.get('country').touched && collegeForm.get('country').invalid">
+
+        <mat-error *ngIf="country.hasError('required')">
+          Enter Your <strong>Country</strong>
+        </mat-error>
+
+      </mat-error>
+
+    </mat-form-field>
+  </div>
+
+
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width">
+      <input matInput type="number" placeholder="Admin Mobile Number" formControlName="mobile" [(ngModel)]="data.mobile" [formControl]="mobile">
+
+      <mat-error *ngIf="collegeForm.get('mobile').touched && collegeForm.get('mobile').invalid">
+
+
+        <mat-error *ngIf="mobile.hasError('required')">
+          Admin Mobile number <strong>required</strong>
+        </mat-error>
+
+        <mat-error *ngIf="mobile.hasError('maxLength')">
+          Maximum 14 charcters required
+        </mat-error>
+
+      </mat-error>
+    </mat-form-field>
+
+  </div>
+
+
+  <div class="form-group">
+    <mat-form-field class="example-half-width" style="margin-left:23px">
+      <input matInput type="number" placeholder="Land Lane Number" formControlName="landline" [(ngModel)]="data.landline" [formControl]="landline">
+
+      <mat-error *ngIf="collegeForm.get('landline').touched && collegeForm.get('landline').invalid">
+
+        <mat-error *ngIf="landline.hasError('required')">
+          Land Lane Number is <strong>required</strong>
+        </mat-error>
+
+      </mat-error>
+
+    </mat-form-field>
+  </div>
+
+
+
+
+  <div class="form-group">
+    <button mat-button type="submit" class="btn btn-lg btn-block btn-signin" (click)="LoadPage()" (click)="collegeprofessional()"   [disabled]="collegeForm.invalid">Register</button>
+  </div>
+</form>
+
+<div class="text-center" *ngIf="PageName !=='congrats'">
+  <img src="./assets/image/college.png" class="img-responsive">
+</div>
+
+
+
+
+<div *ngIf="PageName =='congrats'">
+  <div class="section text-center">
+
+    <h1>Congratulation</h1>
+    <h4 style="margin-top:30px;">Account is Successfully Activated <br>Please SignIn..</h4>
+
+  </div>
+
+  <div class="text-center" style="width:300px;margin:auto;">
+    <img src="./assets/image/congratulationImage.png" class="img-responsive">
+  </div>
+</div>

@@ -1,0 +1,41 @@
+// .example-form {
+//   min-width: 350px;
+//   max-width: 500px;
+//   width: 100%;
+//   font-size: 15px;
+// }
+
+.example-full-width {
+  width: 100%;
+}
+
+.form-group {
+ 
+  button {
+    border-radius: 30px;
+    padding: 5px;
+    color: white;
+    background-color: #2fa1da;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
+.section{
+  
+  h4{
+    margin-top: 25px;
+    color: #5f6268;
+  }
+  a{
+    text-decoration: none;
+    color:#9b9b9b;
+    
+  }
+}
+
+.img-responsive{
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
